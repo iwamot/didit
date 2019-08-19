@@ -1,0 +1,15 @@
+{
+  "IP": false,
+  "SG": true,
+  "FE": false,
+  "AP": true,
+  "ST": false,
+  "SA": true,
+  "PM": true,
+  "NW": true,
+  "DB": true,
+  "ES": true,
+  "SM": false,
+  "AU": true,
+  "SC": false
+}

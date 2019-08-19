@@ -1,0 +1,31 @@
+<template>
+  <div>
+    <h1>didit</h1>
+    <p>
+      those who has passed
+      <a href="https://www.jitec.ipa.go.jp/"
+        >Japan's Information Technology Engineers Examination</a
+      >
+    </p>
+    <ul>
+      <li v-for="userId in userIds" :key="userId">
+        <nuxt-link :to="userId" class="passed">{{ userId }}</nuxt-link>
+      </li>
+    </ul>
+  </div>
+</template>
+
+<script>
+export default {
+  asyncData() {
+    const path = require('path')
+    const userIds = require
+      .context('~/data/', false, /\.json$/)
+      .keys()
+      .map(function(key) {
+        return path.basename(key, '.json')
+      })
+    return { userIds }
+  }
+}
+</script>
