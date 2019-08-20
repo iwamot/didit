@@ -1,6 +1,6 @@
 # didit
 
-https://didit.netlify.com is a website for those who has passed [Japan's Information Technology Engineers Examination](https://www.jitec.ipa.go.jp/).
+https://didit.netlify.com/ is a website for those who has passed [Japan's Information Technology Engineers Examination](https://www.jitec.ipa.go.jp/).
 
 ## How to Join
 
