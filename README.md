@@ -1,6 +1,14 @@
 # didit
 
-> A website for those who has passed Japan's Information Technology Engineers Examination
+https://didit.netlify.com is a website for those who has passed [Japan's Information Technology Engineers Examination](https://www.jitec.ipa.go.jp/).
+
+## How to Join
+
+1. Fork this repository
+2. Create data/{YOUR_GITHUB_ID}.json referring to [data/iwamot.json](https://github.com/iwamot/didit/blob/master/data/iwamot.json)
+3. Send a pull request
+
+All pull requests are welcome, including features and design improvements.
 
 ## Build Setup
 
