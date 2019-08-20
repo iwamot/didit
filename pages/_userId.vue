@@ -1,43 +1,56 @@
 <template>
   <div>
-    <h1><nuxt-link to="/">didit</nuxt-link></h1>
-    <p>
-      <strong>{{ userId }}</strong> has passed <strong>{{ rate }}%</strong> of
-      <a href="https://www.jitec.ipa.go.jp/"
-        >Japan's Information Technology Engineers Examination</a
-      >
-    </p>
-    <ul>
-      <li v-for="exam in exams" :key="exam.abbr">
-        <a
-          :class="{ exam: true, passed: data[exam.abbr] }"
-          :href="
-            'https://www.jitec.ipa.go.jp/1_11seido/' +
-              exam.abbr.toLowerCase() +
-              '.html'
-          "
-          :title="
-            exam.title +
-              ' (' +
-              (data[exam.abbr] ? 'passed' : 'not passed') +
-              ')'
-          "
-          >{{ exam.abbr }}</a
+    <header>
+      <h1><nuxt-link to="/">didit</nuxt-link></h1>
+    </header>
+    <main>
+      <p>
+        <strong
+          ><a :href="'https://github.com/' + $route.params.userId">{{
+            userId
+          }}</a></strong
         >
-      </li>
-    </ul>
-    <p>
-      <a :href="'https://github.com/' + $route.params.userId"
-        >{{ userId }}@GitHub</a
-      >
-      |
-      <nuxt-link to="/">top</nuxt-link>
-    </p>
+        has passed <strong>{{ rate }}%</strong> of
+        <a href="https://www.jitec.ipa.go.jp/"
+          >Japan's Information Technology Engineers Examination</a
+        >
+      </p>
+      <ul>
+        <li v-for="exam in exams" :key="exam.abbr">
+          <a
+            :class="{ exam: true, passed: data[exam.abbr] }"
+            :href="
+              'https://www.jitec.ipa.go.jp/1_11seido/' +
+                exam.abbr.toLowerCase() +
+                '.html'
+            "
+            :title="
+              exam.title +
+                ' (' +
+                (data[exam.abbr] ? 'passed' : 'not passed') +
+                ')'
+            "
+            >{{ exam.abbr }}</a
+          >
+        </li>
+      </ul>
+    </main>
+    <footer>
+      <p>
+        <nuxt-link to="/">top</nuxt-link>
+        |
+        <nuxt-link to="/about">about</nuxt-link>
+      </p>
+    </footer>
   </div>
 </template>
 
 <script>
 export default {
+  validate({ params }) {
+    return /^[a-zA-Z0-9][a-zA-Z0-9-]{0,38}$/.test(params.userId)
+  },
+
   asyncData({ params, error }) {
     const userId = params.userId
 
