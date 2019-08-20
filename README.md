@@ -1,6 +1,6 @@
 # didit
 
-https://didit.netlify.com/ is a website for those who has passed [Japan's Information Technology Engineers Examination](https://www.jitec.ipa.go.jp/).
+https://didit.iwamot.com/ is a website for those who has passed [Japan's Information Technology Engineers Examination](https://www.jitec.ipa.go.jp/).
 
 ## How to Join
 
@@ -27,4 +27,4 @@ $ npm run start
 $ npm run generate
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org/).
