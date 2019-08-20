@@ -46,7 +46,7 @@ h1 a {
 p {
   color: #35a16b;
   font-weight: 500;
-  line-height: 1.3;
+  line-height: 1.5;
   margin: 1rem 0;
 }
 
@@ -58,7 +58,7 @@ ul {
   align-items: center;
   display: flex;
   flex-wrap: wrap;
-  margin: 1rem 0;
+  margin-top: 1.5rem;
 }
 
 ul li {
@@ -74,25 +74,28 @@ ul li a {
   color: #edc58f;
   display: inline-flex;
   font-weight: 500;
-  height: 7rem;
   justify-content: center;
   line-height: 1.2;
   overflow: hidden;
   padding: 1em;
   text-align: center;
   text-decoration: none;
+}
+
+ul.users li a {
+  height: 7rem;
   width: 7rem;
+}
+
+ul.exams li a {
+  height: 6rem;
+  width: 6rem;
 }
 
 ul li a.passed {
   background-color: #ff9900;
   border-color: #ff9900;
   color: #ffffff;
-}
-
-ul li a.exam {
-  height: 6rem;
-  width: 6rem;
 }
 
 ol {
@@ -102,11 +105,8 @@ ol {
 }
 
 ol li {
-  margin: 1rem 0;
-}
-
-footer {
-  margin-top: 1.5rem;
+  line-height: 1.5;
+  margin: 0.5rem 0;
 }
 
 strong {

@@ -2,22 +2,22 @@
   <div>
     <header>
       <h1>didit</h1>
-    </header>
-    <main>
-      <p>
+      <p class="description">
         those who has passed
         <a href="https://www.jitec.ipa.go.jp/"
           >Japan's Information Technology Engineers Examination</a
         >
       </p>
-      <ul>
+    </header>
+    <main>
+      <ul class="users">
         <li v-for="userId in userIds" :key="userId">
           <nuxt-link :to="userId" class="passed">{{ userId }}</nuxt-link>
         </li>
       </ul>
     </main>
     <footer>
-      <p><nuxt-link to="/about">about</nuxt-link></p>
+      <p class="navi"><nuxt-link to="/about">about</nuxt-link></p>
     </footer>
   </div>
 </template>

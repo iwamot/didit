@@ -2,9 +2,7 @@
   <div>
     <header>
       <h1><nuxt-link to="/">didit</nuxt-link></h1>
-    </header>
-    <main>
-      <p>
+      <p class="description">
         <strong
           ><a :href="'https://github.com/' + $route.params.userId">{{
             userId
@@ -15,10 +13,12 @@
           >Japan's Information Technology Engineers Examination</a
         >
       </p>
-      <ul>
+    </header>
+    <main>
+      <ul class="exams">
         <li v-for="exam in exams" :key="exam.abbr">
           <a
-            :class="{ exam: true, passed: data[exam.abbr] }"
+            :class="{ passed: data[exam.abbr] }"
             :href="
               'https://www.jitec.ipa.go.jp/1_11seido/' +
                 exam.abbr.toLowerCase() +
@@ -36,8 +36,8 @@
       </ul>
     </main>
     <footer>
-      <p>
-        <nuxt-link to="/">top</nuxt-link>
+      <p class="navi">
+        <nuxt-link to="/">home</nuxt-link>
         |
         <nuxt-link to="/about">about</nuxt-link>
       </p>
