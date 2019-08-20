@@ -69,6 +69,7 @@ export default {
       return glob.sync('./data/*.json').map(function(file) {
         return '/' + path.basename(file, '.json')
       })
-    }
+    },
+    subFolders: false
   }
 }
