@@ -103,7 +103,7 @@ export default {
 
   head() {
     return {
-      title: this.userId + '@didit',
+      title: this.userId + ' - didit',
       meta: [
         {
           hid: 'description',

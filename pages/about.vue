@@ -52,7 +52,7 @@ export default {
           hid: 'description',
           name: 'description',
           content:
-            'diditは、情報処理技術者試験の合格状況を公開できるサイトです。'
+            '情報処理技術者試験の合格状況を公開できるサイト「didit」の詳細'
         }
       ]
     }
