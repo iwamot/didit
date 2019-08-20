@@ -18,7 +18,8 @@
         <li>
           <a href="https://github.com/iwamot/didit"
             >https://github.com/iwamot/didit</a
-          >をforkする
+          >
+          をforkする
         </li>
         <li>
           <a href="https://github.com/iwamot/didit/blob/master/data/iwamot.json"
