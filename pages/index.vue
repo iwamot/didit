@@ -33,6 +33,19 @@ export default {
         return path.basename(key, '.json')
       })
     return { userIds }
+  },
+
+  head() {
+    return {
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content:
+            "those who has passed Japan's Information Technology Engineers Examination"
+        }
+      ]
+    }
   }
 }
 </script>

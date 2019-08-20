@@ -45,7 +45,17 @@
 <script>
 export default {
   head() {
-    return { title: 'about didit' }
+    return {
+      title: 'about didit',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content:
+            'diditは、情報処理技術者試験の合格状況を公開できるサイトです。'
+        }
+      ]
+    }
   }
 }
 </script>

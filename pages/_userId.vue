@@ -103,7 +103,18 @@ export default {
 
   head() {
     return {
-      title: this.userId + '@didit'
+      title: this.userId + '@didit',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content:
+            this.userId +
+            ' has passed ' +
+            this.rate +
+            "% of Japan's Information Technology Engineers Examination"
+        }
+      ]
     }
   }
 }
