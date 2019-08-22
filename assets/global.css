@@ -44,6 +44,7 @@ h1 a {
 
 p {
   color: #35a16b;
+  font-size: 1rem;
   font-weight: 500;
   line-height: 1.5;
   margin: 1rem 0;
@@ -91,6 +92,7 @@ ul.users li a {
 }
 
 ul.exams li a {
+  font-size: 1.5rem;
   height: 6rem;
   width: 6rem;
 }
