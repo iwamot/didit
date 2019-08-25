@@ -37,7 +37,7 @@ export default {
 
   head() {
     return {
-      title: 'didit：情報処理技術者試験の合格状況をカッコよく表示',
+      title: 'didit：情報処理技術者試験の合格者をカッコよく見せるサイト',
       meta: [
         {
           hid: 'description',
