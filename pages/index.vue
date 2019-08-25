@@ -37,6 +37,7 @@ export default {
 
   head() {
     return {
+      title: 'didit：情報処理技術者試験の合格状況をカッコよく表現',
       meta: [
         {
           hid: 'description',
