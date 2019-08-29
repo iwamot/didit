@@ -126,37 +126,30 @@ export default {
           content: this.description
         },
         {
-          hid: 'og:url',
           property: 'og:url',
           content: 'https://didit.iwamot.com/' + this.userId
         },
         {
-          hid: 'og:type',
           property: 'og:type',
           content: 'profile'
         },
         {
-          hid: 'og:title',
           property: 'og:title',
           content: this.title
         },
         {
-          hid: 'og:description',
           property: 'og:description',
           content: this.title
         },
         {
-          hid: 'twitter:card',
           name: 'twitter:card',
           content: 'summary'
         },
         {
-          hid: 'twitter:title',
           name: 'twitter:title',
           content: this.title
         },
         {
-          hid: 'twitter:description',
           name: 'twitter:description',
           content: this.description
         }
