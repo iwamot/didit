@@ -98,21 +98,67 @@ export default {
         100
     )
 
-    return { data, exams, rate, userId }
+    const title = userId + ' - didit'
+
+    const description =
+      userId +
+      ' has passed ' +
+      rate +
+      "% of Japan's Information Technology Engineers Examination"
+
+    return {
+      data,
+      description,
+      exams,
+      rate,
+      title,
+      userId
+    }
   },
 
   head() {
     return {
-      title: this.userId + ' - didit',
+      title: this.title,
       meta: [
         {
           hid: 'description',
           name: 'description',
-          content:
-            this.userId +
-            ' has passed ' +
-            this.rate +
-            "% of Japan's Information Technology Engineers Examination"
+          content: this.description
+        },
+        {
+          hid: 'og:url',
+          name: 'og:url',
+          content: 'https://didit.iwamot.com/' + this.userId
+        },
+        {
+          hid: 'og:type',
+          name: 'og:type',
+          content: 'profile'
+        },
+        {
+          hid: 'og:title',
+          name: 'og:title',
+          content: this.title
+        },
+        {
+          hid: 'og:description',
+          name: 'og:description',
+          content: this.title
+        },
+        {
+          hid: 'twitter:card',
+          name: 'twitter:card',
+          content: 'summary'
+        },
+        {
+          hid: 'twitter:title',
+          name: 'twitter:title',
+          content: this.title
+        },
+        {
+          hid: 'twitter:description',
+          name: 'twitter:description',
+          content: this.description
         }
       ]
     }
