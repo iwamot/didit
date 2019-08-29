@@ -127,22 +127,22 @@ export default {
         },
         {
           hid: 'og:url',
-          name: 'og:url',
+          property: 'og:url',
           content: 'https://didit.iwamot.com/' + this.userId
         },
         {
           hid: 'og:type',
-          name: 'og:type',
+          property: 'og:type',
           content: 'profile'
         },
         {
           hid: 'og:title',
-          name: 'og:title',
+          property: 'og:title',
           content: this.title
         },
         {
           hid: 'og:description',
-          name: 'og:description',
+          property: 'og:description',
           content: this.title
         },
         {
