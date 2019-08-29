@@ -143,7 +143,7 @@ export default {
         },
         {
           property: 'og:description',
-          content: this.title
+          content: this.description
         },
         {
           name: 'twitter:card',
