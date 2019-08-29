@@ -138,6 +138,10 @@ export default {
           content: this.title
         },
         {
+          property: 'og:image',
+          content: 'https://didit.iwamot.com/didit.png'
+        },
+        {
           property: 'og:description',
           content: this.title
         },
@@ -152,6 +156,10 @@ export default {
         {
           name: 'twitter:description',
           content: this.description
+        },
+        {
+          name: 'twitter:image',
+          content: 'https://didit.iwamot.com/didit.png'
         }
       ]
     }
