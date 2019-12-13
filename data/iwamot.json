@@ -1,5 +1,5 @@
 {
-  "IP": false,
+  "IP": true,
   "SG": true,
   "FE": false,
   "AP": true,
