@@ -9,7 +9,7 @@
   "NW": true,
   "DB": true,
   "ES": true,
-  "SM": false,
+  "SM": true,
   "AU": true,
   "SC": false
 }
