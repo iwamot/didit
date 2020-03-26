@@ -21,14 +21,14 @@
             :class="{ passed: data[exam.abbr] }"
             :href="
               'https://www.jitec.ipa.go.jp/1_11seido/' +
-                exam.abbr.toLowerCase() +
-                '.html'
+              exam.abbr.toLowerCase() +
+              '.html'
             "
             :title="
               exam.title +
-                ' (' +
-                (data[exam.abbr] ? 'passed' : 'not passed') +
-                ')'
+              ' (' +
+              (data[exam.abbr] ? 'passed' : 'not passed') +
+              ')'
             "
             >{{ exam.abbr }}</a
           >
@@ -67,11 +67,11 @@ export default {
       { abbr: 'SG', title: 'Information Security Management Examination' },
       {
         abbr: 'FE',
-        title: 'Fundamental Information Technology Engineer Examination'
+        title: 'Fundamental Information Technology Engineer Examination',
       },
       {
         abbr: 'AP',
-        title: 'Applied Information Technology Engineer Examination'
+        title: 'Applied Information Technology Engineer Examination',
       },
       { abbr: 'ST', title: 'Information Technology Strategist Examination' },
       { abbr: 'SA', title: 'Systems Architect Examination' },
@@ -81,17 +81,17 @@ export default {
       { abbr: 'ES', title: 'Embedded Systems Specialist Examination' },
       {
         abbr: 'SM',
-        title: 'Information Technology Service Manager Examination'
+        title: 'Information Technology Service Manager Examination',
       },
       { abbr: 'AU', title: 'Systems Auditor Examination' },
       {
         abbr: 'SC',
-        title: 'Registered Information Security Specialist Examination'
-      }
+        title: 'Registered Information Security Specialist Examination',
+      },
     ]
 
     const rate = Math.round(
-      (Object.keys(data).filter(function(key) {
+      (Object.keys(data).filter(function (key) {
         return data[key]
       }).length /
         exams.length) *
@@ -112,7 +112,7 @@ export default {
       exams,
       rate,
       title,
-      userId
+      userId,
     }
   },
 
@@ -123,46 +123,46 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: this.description
+          content: this.description,
         },
         {
           property: 'og:url',
-          content: 'https://didit.iwamot.com/' + this.userId
+          content: 'https://didit.iwamot.com/' + this.userId,
         },
         {
           property: 'og:type',
-          content: 'profile'
+          content: 'profile',
         },
         {
           property: 'og:title',
-          content: this.title
+          content: this.title,
         },
         {
           property: 'og:image',
-          content: 'https://didit.iwamot.com/didit.png'
+          content: 'https://didit.iwamot.com/didit.png',
         },
         {
           property: 'og:description',
-          content: this.description
+          content: this.description,
         },
         {
           name: 'twitter:card',
-          content: 'summary'
+          content: 'summary',
         },
         {
           name: 'twitter:title',
-          content: this.title
+          content: this.title,
         },
         {
           name: 'twitter:description',
-          content: this.description
+          content: this.description,
         },
         {
           name: 'twitter:image',
-          content: 'https://didit.iwamot.com/didit.png'
-        }
-      ]
+          content: 'https://didit.iwamot.com/didit.png',
+        },
+      ],
     }
-  }
+  },
 }
 </script>

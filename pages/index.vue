@@ -29,7 +29,7 @@ export default {
     const userIds = require
       .context('~/data/', false, /\.json$/)
       .keys()
-      .map(function(key) {
+      .map(function (key) {
         return path.basename(key, '.json')
       })
     return { userIds }
@@ -43,10 +43,10 @@ export default {
           hid: 'description',
           name: 'description',
           content:
-            "Those who has passed Japan's Information Technology Engineers Examination"
-        }
-      ]
+            "Those who has passed Japan's Information Technology Engineers Examination",
+        },
+      ],
     }
-  }
+  },
 }
 </script>
