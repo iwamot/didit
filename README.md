@@ -14,7 +14,7 @@ All pull requests are welcome, including features and design improvements.
 
 ``` bash
 # install dependencies
-$ npm run install
+$ npm install
 
 # serve with hot reload at localhost:3000
 $ npm run dev
@@ -25,6 +25,9 @@ $ npm run start
 
 # generate static project
 $ npm run generate
+
+# test
+$ npm run test
 ```
 
 For detailed explanation on how things work, see [Nuxt.js docs](https://nuxtjs.org/).
