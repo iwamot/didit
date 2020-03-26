@@ -14,7 +14,8 @@
     "test": "ava --timeout=3m"
   },
   "dependencies": {
-    "nuxt": "^2.12.1"
+    "nuxt": "^2.12.1",
+    "typescript": "^3.8.3"
   },
   "devDependencies": {
     "@ava/babel": "^1.0.1",
