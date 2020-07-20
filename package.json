@@ -15,21 +15,21 @@
   },
   "dependencies": {
     "nuxt": "^2.13.3",
-    "typescript": "^3.9.6"
+    "typescript": "^3.9.7"
   },
   "devDependencies": {
     "@ava/babel": "^1.0.1",
-    "@babel/core": "^7.10.4",
+    "@babel/core": "^7.10.5",
     "@babel/preset-env": "^7.10.4",
     "@nuxtjs/eslint-config": "^3.0.0",
     "@nuxtjs/eslint-module": "^2.0.0",
     "ava": "^3.10.1",
     "babel-eslint": "^10.1.0",
-    "eslint": "^7.4.0",
+    "eslint": "^7.5.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-nuxt": "^1.0.0",
     "eslint-plugin-prettier": "^3.1.4",
-    "jsdom": "^16.2.2",
+    "jsdom": "^16.3.0",
     "prettier": "^2.0.5"
   },
   "ava": {
