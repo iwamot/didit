@@ -3,7 +3,7 @@
     <header>
       <h1>didit</h1>
       <p class="description">
-        Those who has passed
+        Those who have passed
         <a href="https://www.jitec.ipa.go.jp/"
           >Japan's Information Technology Engineers Examination</a
         >
@@ -43,7 +43,7 @@ export default {
           hid: 'description',
           name: 'description',
           content:
-            "Those who has passed Japan's Information Technology Engineers Examination",
+            "Those who have passed Japan's Information Technology Engineers Examination",
         },
       ],
     }
