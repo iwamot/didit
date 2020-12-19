@@ -12,7 +12,7 @@ test.before('Init Nuxt.js', async (t) => {
   } catch (e) {}
   config.rootDir = rootDir
   config.dev = false
-  config.mode = 'universal'
+  config.ssr = false
   nuxt = new Nuxt(config)
   await new Builder(nuxt).build()
   nuxt.listen(4000, 'localhost')
