@@ -1,7 +1,7 @@
 {
   "IP": true,
   "SG": true,
-  "FE": false,
+  "FE": true,
   "AP": true,
   "ST": false,
   "SA": true,
