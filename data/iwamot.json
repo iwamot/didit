@@ -3,7 +3,7 @@
   "SG": true,
   "FE": true,
   "AP": true,
-  "ST": false,
+  "ST": true,
   "SA": true,
   "PM": true,
   "NW": true,
