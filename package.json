@@ -11,7 +11,7 @@
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "lintfix": "eslint --fix --ext .js,.vue --ignore-path .gitignore .",
-    "test": "jest --testTimeout=180000"
+    "test": "jest"
   },
   "dependencies": {
     "nuxt": "^2.15.8",
@@ -25,6 +25,6 @@
     "eslint-plugin-nuxt": "^3.1.0",
     "eslint-plugin-prettier": "^4.0.0",
     "jest": "^27.5.1",
-    "playwright": "^1.19.0"
+    "playwright": "^1.19.1"
   }
 }
