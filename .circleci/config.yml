@@ -1,12 +1,8 @@
-# Javascript Node CircleCI 2.0 configuration file
-#
-# Check https://circleci.com/docs/2.0/language-javascript/ for more details
-#
 version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:14.15.2-stretch
+      - image: cimg/node:17.5.0-browsers
 
     working_directory: ~/repo
 
