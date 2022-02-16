@@ -1,40 +1,19 @@
-import { resolve } from 'path'
-import test from 'ava'
-import { Nuxt, Builder } from 'nuxt'
+import { createPage, setupTest } from '@nuxt/test-utils'
 
-let nuxt = null
+describe('browser', () => {
+  setupTest({ browser: true })
 
-test.before('Init Nuxt.js', async (t) => {
-  const rootDir = resolve(__dirname, '..')
-  let config = {}
-  try {
-    config = require(resolve(rootDir, 'nuxt.config.js'))
-  } catch (e) {}
-  config.rootDir = rootDir
-  config.dev = false
-  config.ssr = false
-  nuxt = new Nuxt(config)
-  await new Builder(nuxt).build()
-  nuxt.listen(4000, 'localhost')
-})
+  it('Route / has a link to @iwamot', async () => {
+    const page = await createPage('/')
+    const html = await page.innerHTML('body')
+    expect(html).toContain('<a href="/iwamot" class="passed">iwamot</a>')
+  })
 
-test('Route / exists and has a link to @iwamot', async (t) => {
-  const window = await nuxt.renderAndGetWindow('http://localhost:4000/')
-  const element = window.document.querySelector("a[href='/iwamot']")
-  t.not(element, null)
-  t.is(element.textContent, 'iwamot')
-})
-
-test('Route /iwamot exists and shows @iwamot passed AP exam', async (t) => {
-  const window = await nuxt.renderAndGetWindow('http://localhost:4000/iwamot')
-  const element = window.document.querySelector(
-    "a[href='https://www.jitec.ipa.go.jp/1_11seido/ap.html']"
-  )
-  t.not(element, null)
-  t.is(element.textContent, 'AP')
-  t.true(element.classList.contains('passed'))
-})
-
-test.after('Closing server', (t) => {
-  nuxt.close()
+  it('Route /iwamot shows that @iwamot passed AP exam', async () => {
+    const page = await createPage('/iwamot')
+    const html = await page.innerHTML('body')
+    expect(html).toContain(
+      '<a href="https://www.jitec.ipa.go.jp/1_11seido/ap.html" title="Applied Information Technology Engineer Examination (passed)" class="passed">AP</a>'
+    )
+  })
 })

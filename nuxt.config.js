@@ -19,8 +19,7 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       {
         rel: 'stylesheet',
-        href:
-          'https://fonts.googleapis.com/css?family=Heebo:500|Noto+Serif+JP:500&display=swap&subset=japanese',
+        href: 'https://fonts.googleapis.com/css?family=Heebo:500|Noto+Serif+JP:500&display=swap&subset=japanese',
       },
     ],
   },
@@ -57,8 +56,8 @@ export default {
      */
     extend(config, ctx) {},
     babel: {
-      babelrc: true
-    }
+      babelrc: true,
+    },
   },
 
   server: {
