@@ -11,8 +11,7 @@
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "lintfix": "eslint --fix --ext .js,.vue --ignore-path .gitignore .",
-    "test": "jest",
-    "preinstall": "npx npm-force-resolutions"
+    "test": "jest"
   },
   "dependencies": {
     "nuxt": "^2.15.8",
@@ -21,16 +20,12 @@
   "devDependencies": {
     "@babel/eslint-parser": "^7.17.0",
     "@nuxt/test-utils": "^0.2.2",
+    "@nuxtjs/eslint-module": "^3.0.2",
     "eslint": "^8.9.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-nuxt": "^3.1.0",
     "eslint-plugin-prettier": "^4.0.0",
     "jest": "^27.5.1",
     "playwright": "^1.19.1"
-  },
-  "resolutions": {
-    "postcss": "^8.2.13",
-    "glob-parent": "^5.1.2",
-    "nth-check": "^2.0.1"
   }
 }

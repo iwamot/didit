@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: cimg/node:16.14.0-browsers
+      - image: cimg/node:14.19.0-browsers
 
     working_directory: ~/repo
 
@@ -17,7 +17,7 @@ jobs:
 
       - run: |
           npm install
-          npx playwright install chrome
+          npx playwright install
 
       - save_cache:
           paths:
