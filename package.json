@@ -5,7 +5,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "test": "playwright test",
+    "test:e2e": "playwright test",
     "lint": "run-p lint:eslint lint:prettier",
     "lint:eslint": "eslint pages e2e",
     "lint:prettier": "prettier --check pages e2e",

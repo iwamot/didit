@@ -24,7 +24,7 @@ $ yarn build
 $ yarn start
 
 # test
-$ yarn test
+$ yarn test:e2e
 ```
 
 For detailed explanation on how things work, see [Next.js docs](https://nextjs.org/).
