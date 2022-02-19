@@ -14,20 +14,17 @@ All pull requests are welcome, including features and design improvements.
 
 ``` bash
 # install dependencies
-$ npm install
+$ yarn
 
 # serve with hot reload at localhost:3000
-$ npm run dev
+$ yarn dev
 
 # build for production and launch server
-$ npm run build
-$ npm run start
-
-# generate static project
-$ npm run generate
+$ yarn build
+$ yarn start
 
 # test
-$ npm run test
+$ yarn test
 ```
 
-For detailed explanation on how things work, see [Nuxt.js docs](https://nuxtjs.org/).
+For detailed explanation on how things work, see [Next.js docs](https://nextjs.org/).

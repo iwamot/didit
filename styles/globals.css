@@ -15,11 +15,13 @@ body {
 }
 
 *:lang(ja) {
-  font-family: 'Noto Serif JP', serif;
+  font-family: 'Noto Sans JP', serif;
+  font-weight: 400;
 }
 
 a {
   color: inherit;
+  text-decoration: underline;
 }
 
 *:lang(ja) a {
@@ -114,6 +116,11 @@ ol li {
   margin: 0.5rem 0;
 }
 
+footer {
+  margin-top: 1.2rem;
+}
+
 strong {
   color: #ff2800;
+  font-weight: 500;
 }
