@@ -5,7 +5,7 @@ html {
 
 body {
   background-color: #ffffff;
-  font-family: 'Heebo', sans-serif;
+  font-family: Heebo, sans-serif;
   height: auto;
   margin: 0 auto;
   max-width: 50rem;
@@ -15,7 +15,7 @@ body {
 }
 
 *:lang(ja) {
-  font-family: 'Noto Sans JP', serif;
+  font-family: Heebo, 'Noto Sans JP', serif;
   font-weight: 400;
 }
 
