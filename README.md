@@ -23,6 +23,9 @@ $ yarn dev
 $ yarn build
 $ yarn start
 
+# export static HTML
+$ yarn export
+
 # test
 $ yarn test:e2e
 ```
