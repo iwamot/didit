@@ -35,7 +35,7 @@ function User({
       <header>
         <h1>
           <Link href="/">
-            <a>didit</a>
+            didit
           </Link>
         </h1>
         <p className="description">
@@ -58,18 +58,15 @@ function User({
                   exam.abbr.toLowerCase() +
                   ".html"
                 }
+                {...(data[exam.abbr] && { className: "passed" })}
+                title={
+                  exam.title +
+                  " (" +
+                  (data[exam.abbr] ? "passed" : "not passed") +
+                  ")"
+                }
               >
-                <a
-                  {...(data[exam.abbr] && { className: "passed" })}
-                  title={
-                    exam.title +
-                    " (" +
-                    (data[exam.abbr] ? "passed" : "not passed") +
-                    ")"
-                  }
-                >
-                  {exam.abbr}
-                </a>
+                {exam.abbr}
               </Link>
             </li>
           ))}
@@ -78,11 +75,11 @@ function User({
       <footer>
         <p className="navi">
           <Link href="/">
-            <a>home</a>
+            home
           </Link>{" "}
           |{" "}
           <Link href="/about">
-            <a>about</a>
+            about
           </Link>
         </p>
       </footer>

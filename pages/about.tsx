@@ -14,7 +14,7 @@ function About() {
       <header>
         <h1>
           <Link href="/">
-            <a>didit</a>
+            didit
           </Link>
         </h1>
       </header>
@@ -48,7 +48,7 @@ function About() {
           iwamot (<a href="https://github.com/iwamot">GitHub</a>,{" "}
           <a href="https://twitter.com/iwamot">Twitter</a>,{" "}
           <Link href="/iwamot">
-            <a>didit</a>
+            didit
           </Link>
           )
         </p>
@@ -56,7 +56,7 @@ function About() {
       <footer>
         <p className="navi">
           <Link href="/">
-            <a>home</a>
+            home
           </Link>
         </p>
       </footer>

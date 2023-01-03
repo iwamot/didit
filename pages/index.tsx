@@ -28,8 +28,8 @@ function Home({ userIds }: InferGetStaticPropsType<typeof getStaticProps>) {
         <ul className="users">
           {userIds.map((userId: any) => (
             <li key={userId}>
-              <Link href={"/" + userId}>
-                <a className="passed">{userId}</a>
+              <Link href={"/" + userId}  className="passed">
+                {userId}
               </Link>
             </li>
           ))}
@@ -38,7 +38,7 @@ function Home({ userIds }: InferGetStaticPropsType<typeof getStaticProps>) {
       <footer>
         <p className="navi">
           <Link href="/about">
-            <a>about</a>
+            about
           </Link>
         </p>
       </footer>
