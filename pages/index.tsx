@@ -49,9 +49,9 @@ function Home({ userIds }: InferGetStaticPropsType<typeof getStaticProps>) {
 export const getStaticProps: GetStaticProps = async () => {
   const dataDirectory = path.join(process.cwd(), "data");
   const filenames = fs.readdirSync(dataDirectory);
-  const userIds = filenames.map((filename) => {
-    return path.basename(filename, ".json");
-  });
+  const userIds = filenames
+    .map((filename) => path.basename(filename, ".json"))
+    .filter((userId) => /^[a-zA-Z0-9_-]+$/.test(userId));
   return {
     props: { userIds },
   };
