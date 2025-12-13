@@ -19,12 +19,11 @@ $ yarn
 # serve with hot reload at localhost:3000
 $ yarn dev
 
-# build for production and launch server
-$ yarn build
-$ yarn start
-
 # export static HTML
-$ yarn export
+$ yarn build
+
+# serve static files locally
+$ yarn serve
 
 # test
 $ yarn test:e2e
