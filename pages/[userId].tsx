@@ -1,9 +1,8 @@
+import fs from "node:fs";
+import path from "node:path";
+import type { GetStaticProps, InferGetStaticPropsType } from "next";
 import Head from "next/head";
 import Link from "next/link";
-import fs from "fs";
-import path from "path";
-import { GetStaticProps } from "next";
-import { InferGetStaticPropsType } from "next";
 
 function User({
   userId,
@@ -19,7 +18,7 @@ function User({
         <meta name="description" content={description} />
         <meta
           property="og:url"
-          content={"https://didit.iwamot.com/" + userId}
+          content={`https://didit.iwamot.com/${userId}`}
         />
         <meta property="og:type" content="profile" />
         <meta property="og:title" content={title} />
@@ -34,13 +33,11 @@ function User({
       </Head>
       <header>
         <h1>
-          <Link href="/">
-            didit
-          </Link>
+          <Link href="/">didit</Link>
         </h1>
         <p className="description">
           <strong>
-            <a href={"https://github.com/" + userId}>{userId}</a>
+            <a href={`https://github.com/${userId}`}>{userId}</a>
           </strong>{" "}
           has passed <strong>{rate}%</strong> of{" "}
           <a href="https://www.jitec.ipa.go.jp/">
@@ -50,7 +47,7 @@ function User({
       </header>
       <main>
         <ul className="exams">
-          {exams.map((exam: any) => (
+          {exams.map((exam) => (
             <li key={exam.abbr}>
               <Link
                 href={
@@ -74,13 +71,7 @@ function User({
       </main>
       <footer>
         <p className="navi">
-          <Link href="/">
-            home
-          </Link>{" "}
-          |{" "}
-          <Link href="/about">
-            about
-          </Link>
+          <Link href="/">home</Link> | <Link href="/about">about</Link>
         </p>
       </footer>
     </div>
@@ -122,17 +113,13 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   if (params === undefined) {
     throw new Error("params is undefined.");
   }
-  const jsonPath = path.join(process.cwd(), "data", params.userId + ".json");
+  const jsonPath = path.join(process.cwd(), "data", `${params.userId}.json`);
   const jsonText = fs.readFileSync(jsonPath, "utf-8");
   const data = JSON.parse(jsonText);
   const rate = Math.round(
-    (Object.keys(data).filter(function (key) {
-      return data[key];
-    }).length /
-      exams.length) *
-      100
+    (Object.keys(data).filter((key) => data[key]).length / exams.length) * 100,
   );
-  const title = params.userId + " - didit";
+  const title = `${params.userId} - didit`;
   const description =
     params.userId +
     " has passed " +

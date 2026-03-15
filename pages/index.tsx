@@ -1,9 +1,8 @@
+import fs from "node:fs";
+import path from "node:path";
+import type { GetStaticProps, InferGetStaticPropsType } from "next";
 import Head from "next/head";
 import Link from "next/link";
-import fs from "fs";
-import path from "path";
-import { GetStaticProps } from "next";
-import { InferGetStaticPropsType } from "next";
 
 function Home({ userIds }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
@@ -26,9 +25,9 @@ function Home({ userIds }: InferGetStaticPropsType<typeof getStaticProps>) {
       </header>
       <main>
         <ul className="users">
-          {userIds.map((userId: any) => (
+          {userIds.map((userId: string) => (
             <li key={userId}>
-              <Link href={"/" + userId}  className="passed">
+              <Link href={`/${userId}`} className="passed">
                 {userId}
               </Link>
             </li>
@@ -37,9 +36,7 @@ function Home({ userIds }: InferGetStaticPropsType<typeof getStaticProps>) {
       </main>
       <footer>
         <p className="navi">
-          <Link href="/about">
-            about
-          </Link>
+          <Link href="/about">about</Link>
         </p>
       </footer>
     </div>

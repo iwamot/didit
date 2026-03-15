@@ -8,22 +8,54 @@ name: Lint Code Base
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
   pull_request:
-    branches: [ master ]
+    branches: [master]
+
+permissions:
+  contents: read
+  statuses: write
+
 jobs:
   run-lint:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
         with:
           # Full git history is needed to get a proper list of changed files within `super-linter`
           fetch-depth: 0
+          persist-credentials: false
 
       - name: Lint Code Base
-        uses: github/super-linter@v4
+        uses: super-linter/super-linter@61abc07d755095a68f4987d1c2c3d1d64408f1f9 # v8.5.0
         env:
           VALIDATE_ALL_CODEBASE: false
           DEFAULT_BRANCH: master
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Disable PR comment (requires additional permissions)
+          ENABLE_GITHUB_PULL_REQUEST_SUMMARY_COMMENT: false
+          # Disable commitlint (no config file)
+          VALIDATE_GIT_COMMITLINT: false
+          # Use Biome instead of ESLint/Prettier for JS/TS/JSX/TSX
+          VALIDATE_JAVASCRIPT_ES: false
+          VALIDATE_TYPESCRIPT_ES: false
+          VALIDATE_JAVASCRIPT_PRETTIER: false
+          VALIDATE_TYPESCRIPT_PRETTIER: false
+          VALIDATE_JSX: false
+          VALIDATE_JSX_PRETTIER: false
+          VALIDATE_TSX: false
+          VALIDATE_TSX_PRETTIER: false
+          # Disable JSON/JSONC ESLint/Prettier (use Biome)
+          VALIDATE_JSON: false
+          VALIDATE_JSONC: false
+          VALIDATE_JSON_PRETTIER: false
+          VALIDATE_JSONC_PRETTIER: false
+          # Disable CSS Prettier/Stylelint (use Biome)
+          VALIDATE_CSS_PRETTIER: false
+          VALIDATE_CSS: false
+          # Disable HTML/GraphQL/Vue Prettier (use Biome)
+          VALIDATE_HTML_PRETTIER: false
+          VALIDATE_GRAPHQL_PRETTIER: false
+          VALIDATE_VUE: false
+          VALIDATE_VUE_PRETTIER: false
