@@ -13,14 +13,13 @@ function About() {
       </Head>
       <header>
         <h1>
-          <Link href="/">
-            didit
-          </Link>
+          <Link href="/">didit</Link>
         </h1>
       </header>
       <main>
         <p lang="ja">
-          diditは、<a href="https://www.jitec.ipa.go.jp/">情報処理技術者試験</a>
+          diditは、
+          <a href="https://www.ipa.go.jp/shiken/">情報処理技術者試験</a>
           の合格状況を公開できるサイトです。合格者をカッコよく見せたくて作りました。
         </p>
         <p lang="ja">
@@ -47,17 +46,12 @@ function About() {
           <br />
           iwamot (<a href="https://github.com/iwamot">GitHub</a>,{" "}
           <a href="https://twitter.com/iwamot">Twitter</a>,{" "}
-          <Link href="/iwamot">
-            didit
-          </Link>
-          )
+          <Link href="/iwamot">didit</Link>)
         </p>
       </main>
       <footer>
         <p className="navi">
-          <Link href="/">
-            home
-          </Link>
+          <Link href="/">home</Link>
         </p>
       </footer>
     </div>

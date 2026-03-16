@@ -7,28 +7,21 @@
     "start": "next start",
     "serve": "next build && serve ./out",
     "test:e2e": "playwright test",
-    "lint": "run-p lint:eslint lint:prettier",
-    "lint:eslint": "eslint pages e2e",
-    "lint:prettier": "prettier --check pages e2e",
-    "fix": "run-s fix:eslint fix:prettier",
-    "fix:eslint": "eslint --fix pages e2e",
-    "fix:prettier": "prettier --write pages e2e"
+    "lint": "biome check",
+    "fix": "biome check --write",
+    "postinstall": "playwright install"
   },
   "dependencies": {
-    "next": "16.1.5",
-    "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "next": "^16.1.6",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
   },
   "devDependencies": {
-    "@playwright/test": "^1.57.0",
-    "@types/node": "25.0.1",
-    "@types/react": "19.2.7",
-    "eslint": "9.39.2",
-    "eslint-config-next": "16.0.10",
-    "eslint-config-prettier": "^10.1.8",
-    "prettier": "^3.7.4",
-    "serve": "^14.2.5",
-    "typescript": "5.9.3",
-    "yarn-run-all": "^3.1.1"
+    "@biomejs/biome": "^2.4.7",
+    "@playwright/test": "^1.58.2",
+    "@types/node": "^25.5.0",
+    "@types/react": "^19.2.14",
+    "serve": "^14.2.6",
+    "typescript": "^5.9.3"
   }
 }

@@ -15,7 +15,7 @@ body {
 }
 
 *:lang(ja) {
-  font-family: Heebo, 'Noto Sans JP', serif;
+  font-family: Heebo, "Noto Sans JP", serif;
   font-weight: 400;
 }
 
@@ -54,6 +54,17 @@ p {
 
 p:lang(ja) {
   color: #000000;
+}
+
+ol {
+  list-style-type: decimal;
+  margin: 1rem 0;
+  padding-left: 3rem;
+}
+
+ol li {
+  line-height: 1.5;
+  margin: 0.5rem 0;
 }
 
 ul {
@@ -103,17 +114,6 @@ ul li a.passed {
   background-color: #ff9900;
   border-color: #ff9900;
   color: #ffffff;
-}
-
-ol {
-  list-style-type: decimal;
-  margin: 1rem 0;
-  padding-left: 3rem;
-}
-
-ol li {
-  line-height: 1.5;
-  margin: 0.5rem 0;
 }
 
 footer {
