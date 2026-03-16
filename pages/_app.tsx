@@ -1,4 +1,4 @@
-import "../styles/destyle-3.0.2.css";
+import "../styles/destyle-4.0.1.css";
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";

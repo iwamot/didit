@@ -1,9 +1,9 @@
-import { PlaywrightTestConfig } from '@playwright/test';
+import type { PlaywrightTestConfig } from "@playwright/test";
 
 const config: PlaywrightTestConfig = {
   timeout: 3 * 60 * 1000,
   webServer: {
-    command: 'yarn serve',
+    command: "yarn serve",
     port: 3000,
     reuseExistingServer: !process.env.CI,
   },
